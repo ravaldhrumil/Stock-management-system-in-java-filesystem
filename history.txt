@@ -1,0 +1,3 @@
+BUY: Apple, Quantity: 20, Price: 150.0
+BUY: Amazon, Quantity: 5, Price: 2000.0
+Sell: Apple, Quantity: 15, Price: 150.0
