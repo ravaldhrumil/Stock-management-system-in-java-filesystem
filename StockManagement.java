@@ -121,14 +121,16 @@ public class StockManagement {
     public static void displayPortfolio() {
         Iterator itr = portfolio.keySet().iterator();
         double portfolioValue = 0.0;
+        System.out.println("\n\n\t\tQuantity\t\tName\t\tTotal value");
+        System.out.println("---------------------------------------------------------------------------");
         while (itr.hasNext()) {
             Stock s = portfolio.get(itr.next());
             double currentStockValue = s.quantity * s.price;
-            System.out.println("You have " + s.quantity + " " + s.name + " stock of total value " + currentStockValue);
+            System.out.println("\t\t" + s.quantity + "\t\t\t" + s.name + "\t\t" + currentStockValue);
             portfolioValue += currentStockValue;
         }
-        System.out.println("------------------------------------------------------------------");
-        System.out.println("Your total portfolio value is: " + portfolioValue);
+        System.out.println("---------------------------------------------------------------------------");
+        System.out.println("\t\tYour total portfolio value is: " + portfolioValue);
     }
 
     @SuppressWarnings("rawtypes")
@@ -228,6 +230,7 @@ public class StockManagement {
 
                     case 6:
                         sc.close();
+                        System.out.println("\n\n\n\t\tThank you for using our system!!!!!\n\n");
                         System.exit(0);
                         break;
 
